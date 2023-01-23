@@ -12,8 +12,6 @@
     />
   </head>
   <body>
-    <!-- Damn Geezer's Navbar -->
-    <!-- <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column"> -->
     <nav
       class="navbar navbar-expand-lg navbar-dark w-100 bg-dark mb-3 text-light"
     >
@@ -36,37 +34,45 @@
         >
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a href="#" class="nav-link active" aria-current="page">Home</a>
+              <a href="./" class="nav-link active" aria-current="page">Home</a>
             </li>
-            <li class="nav-item dropdown">
-              <a
-                href="#"
-                class="nav-link dropdown-toggle"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-                >Wordlists</a
+            <li class="nav-item">
+              <a href="./wordlist.html" class="nav-link">Wordlist</a>
+            </li>
+
+            <li class="nav-item">
+              <a href="./dictionary-api.html" class="nav-link"
+                >Dictionary API</a
               >
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">List1</a></li>
-                <li><hr class="dropdown-divider" /></li>
-                <li><a class="dropdown-item" href="#">New</a></li>
-              </ul>
+            </li>
+
+            <!-- <li class="nav-item dropdown">
+            <a
+              href="#"
+              class="nav-link dropdown-toggle"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+              >Wordlists</a
+            >
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">List1</a></li>
+              <li><hr class="dropdown-divider" /></li>
+              <li><a class="dropdown-item" href="#">New</a></li>
+            </ul>
+          </li> -->
+            <li class="nav-item">
+              <a href="./account.html" class="nav-link">Account</a>
             </li>
             <li class="nav-item">
-              <a href="#" class="nav-link">Account</a>
+              <a href="./contact-us.html" class="nav-link">Conatcts</a>
             </li>
             <li class="nav-item">
-              <a href="#" class="nav-link">Conatcts</a>
-            </li>
-            <li class="nav-item">
-              <a href="#" class="nav-link">About Me</a>
+              <a href="./about.html" class="nav-link">About Me</a>
             </li>
           </ul>
         </div>
       </div>
-      <!-- End of the Damn Geezer's Navbar-->
-      <!-- Damn Geezers Main element starts-->
     </nav>
     <div class="container my-2 d-flex flex-column mb-3">
       <main class="text-center" id="dic-element">
@@ -151,20 +157,6 @@
       integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
       crossorigin="anonymous"
     ></script>
-    <script>
-      document.querySelector("#email-submit").addEventListener("click", () => {
-        let [emailValue, subject, message] = [
-          document.querySelector("#email").value,
-          document.querySelector("#subject").value,
-          document.querySelector("#message").value,
-        ];
-        [
-          document.querySelector("#email").value,
-          document.querySelector("#subject").value,
-          document.querySelector("#message").value,
-        ] = ["", "", ""];
-        window.open(`mailto:${emailValue}?subject=${subject}&body=${message}`);
-      });
-    </script>
+    <script src="contactus.js"></script>
   </body>
 </html>

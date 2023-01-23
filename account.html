@@ -12,8 +12,6 @@
     />
   </head>
   <body>
-    <!-- Damn Geezer's Navbar -->
-    <!-- <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column"> -->
     <nav
       class="navbar navbar-expand-lg navbar-dark w-100 bg-dark mb-3 text-light"
     >
@@ -36,37 +34,45 @@
         >
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a href="#" class="nav-link active" aria-current="page">Home</a>
+              <a href="./" class="nav-link active" aria-current="page">Home</a>
             </li>
-            <li class="nav-item dropdown">
-              <a
-                href="#"
-                class="nav-link dropdown-toggle"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-                >Wordlists</a
+            <li class="nav-item">
+              <a href="./wordlist.html" class="nav-link">Wordlist</a>
+            </li>
+
+            <li class="nav-item">
+              <a href="./dictionary-api.html" class="nav-link"
+                >Dictionary API</a
               >
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">List1</a></li>
-                <li><hr class="dropdown-divider" /></li>
-                <li><a class="dropdown-item" href="#">New</a></li>
-              </ul>
+            </li>
+
+            <!-- <li class="nav-item dropdown">
+            <a
+              href="#"
+              class="nav-link dropdown-toggle"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+              >Wordlists</a
+            >
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">List1</a></li>
+              <li><hr class="dropdown-divider" /></li>
+              <li><a class="dropdown-item" href="#">New</a></li>
+            </ul>
+          </li> -->
+            <li class="nav-item">
+              <a href="./account.html" class="nav-link">Account</a>
             </li>
             <li class="nav-item">
-              <a href="#" class="nav-link">Account</a>
+              <a href="./contact-us.html" class="nav-link">Conatcts</a>
             </li>
             <li class="nav-item">
-              <a href="#" class="nav-link">Conatcts</a>
-            </li>
-            <li class="nav-item">
-              <a href="#" class="nav-link">About Me</a>
+              <a href="./about.html" class="nav-link">About Me</a>
             </li>
           </ul>
         </div>
       </div>
-      <!-- End of the Damn Geezer's Navbar-->
-      <!-- Damn Geezers Main element starts-->
     </nav>
     <div class="container my-2 d-flex flex-column mb-3">
       <main class="text-center row" id="dicElement">
@@ -154,69 +160,6 @@
       integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
       crossorigin="anonymous"
     ></script>
-    <script>
-      let loginBtn = document.querySelector("#login-btn");
-      let isPassValid = (password) => {
-        return /^(?=.*\d)(?=(.*\W){2})(?=.*[a-zA-Z])(?!.*\s)/.test(password);
-      };
-      loginBtn.addEventListener("click", function () {
-        alert("login is triggered");
-        let username = document.querySelector("#username").value;
-        let password = document.querySelector("#password").value;
-        if (localStorage.users !== undefined) {
-          let users = JSON.parse(localStorage.getItem("users"));
-          console.log(users);
-          if (users.hasOwnProperty(username)) {
-            alert("Yes we have something similiar");
-            try {
-              if (users[username]["password"] === password) {
-                alert("Yes your creditionals are verified");
-                localStorage["activeUser"] = username;
-                window.location = "./dictionary-api.html";
-              } else {
-                alert("No,  passwords do not match");
-              }
-            } catch (error) {
-              alert("No, passwords do not match");
-            }
-          }
-        } else {
-          alert("There is no such account");
-        }
-      });
-      let signupBtn = document.querySelector("#signup-btn");
-      console.log(signupBtn);
-      signupBtn.addEventListener("click", function () {
-        alert("sign up is triggered");
-        let username = document.querySelector("#username1").value;
-        let password = document.querySelector("#password1").value;
-
-        try {
-          let users = JSON.parse(localStorage.getItem("users"));
-          alert("user object exists");
-          users[username] = {};
-          users[username]["password"] = password;
-          users[username]["notebooks"] = [];
-          console.log(isPassValid(password));
-          if (isPassValid(password) === true) {
-            console.log("heh");
-            localStorage.setItem("users", JSON.stringify(users));
-            alert("user object is setted");
-          } else {
-            alert("please enter a strong password");
-          }
-        } catch (error) {
-          let users = {};
-          users[username] = {};
-          users[username]["password"] = password;
-          users[username]["notebooks"] = [];
-          if (isPassValid(password)) {
-            localStorage.setItem("users", JSON.stringify(users));
-          } else {
-            alert("please enter a stron password");
-          }
-        }
-      });
-    </script>
+    <script src="assets/js/login.js"></script>
   </body>
 </html>
