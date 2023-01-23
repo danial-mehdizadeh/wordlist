@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="error"></p>
+
+    <script src="script.js"></script>
+</body>
+</html>
+    <!--Homework:
+
+    TV Show Project - Part 1/3
+
+    In this weeks project we will be using the knowledge we learnt from JS1 & JS2 to build the first version of our website.
+
+    You must make a web app using HTML, CSS, and JavaScript which shows details of all of the episodes of  a TV show.
+
+    ***for this week, you just need to display episodes of 1 tv show; you can choose one of these apis:
+
+    • Game Of Thrones : https://api.tvmaze.com/shows/82/episodes
+
+    • The Sopranos :
+    https://api.tvmaze.com/shows/527/episodes
+
+    • Planet Earth II : https://api.tvmaze.com/shows/22036/episodes
+
+    • True Detective : https://api.tvmaze.com/shows/5/episodes
+
+    • Fresh Prince : https://api.tvmaze.com/shows/582/episodes
+
+    • The Wire : https://api.tvmaze.com/shows/179/episodes
+
+    • Mythbusters : https://api.tvmaze.com/shows/379/episodes
+
+    • Scrapheap Challenge : https://api.tvmaze.com/shows/4729/episodes
+
+    For this assignment you should do these steps: 
+    • New repo created 
+    • New repo is named EXACTLY tv-show-dom-project 
+    • Repo is NOT a fork 
+    • Repo has the starter content (index.html, etc) 
+    • Repo cloned locally 
+    • Published site is visible at https://aps-[[github-username]]-tv.netlify.app/
+
+    #LEVEL 100:
+
+    • All episodes must be shown 
+    • For each episode, AT LEAST following must be displayed: 
+    • the episode's name 
+    • the season number 
+    • the episode number 
+    • the episode's medium-sized image 
+    • the episode's summary text 
+    • You should combine season number and episode number into an episode code: 
+    • Each part should be zero-padded to two digits.
+    • Example: S02E07 would be the code for the 7th episode of the 2nd season. S2E7 would be  
+    incorrect. 
+    Your page should state somewhere that the data has (originally) come from TVMaze.com, and link back  
+    to that site (or the specific episode on that site). See tvmaze.com/api#licensing.
+
+
+    #LEVEL 200: 
+    • Complete all requirements from Level 100 
+    • Add a "live" search input: 
+    • Only episodes whose summary OR name contains the search term should be displayed 
+    • The search should be case-insensitive 
+    • The display should update immediately after each keystroke changes the input. 
+    • Display how many episodes match the current search 
+    • If the search box is cleared, all episodes should be shown. 
+    • If you have been fetching the episode data from the API, be careful not to cause many frequent  
+    requests with this search feature. The search should look through an in-memory copy of the  
+    episode list. Do not fetch the data again each time something is typed!
+
+
+    #LEVEL 300: 
+    • Add an Episode Selector 
+    • Complete all requirements from level 200 
+    • Add a select input which allows you to jump quickly to an episode: 
+    • The select input should list all episodes in the format: "S01E01 - Winter is Coming" 
+    • When the user makes a selection, they should be taken directly to that episode in the list 
+    • Bonus: if you prefer, when the select is used, ONLY show the selected episode. If you do this, be  
+    sure to provide a way for the user to see all episodes again.
+
+    good luck😈
+
+    31 Dec 11:59 PM-->
+<!--
+    // console.log(div)
+    // datas = datas.map(data=>{
+    //     return [['name',data.name],['number',data.season],['summary',data.summary],['image',data.image.medium,true],['code',data.code]]
+    // })
+    // console.log(datas)
+    // function fillingEpisodeDiv(datas,parentElement){
+    //     for(let i = 0;i<datas.length;i++){
+    //         console.log(i)
+    //         let episodeDiv = {
+    //             div : document.createElement('article'),
+    //             name : document.createElement('h3'),
+    //             num : document.createElement('strong'),
+    //             image : document.createElement('img'),
+    //             summary : document.createElement('p'),
+    //             code : document.createElement('p'),
+    //         }
+            
+    //         for(let j = 0;j<datas[i].length;j++){
+    //             let row = datas[i][j]
+    //             if(row[0]){
+    //                 if(row[2]){
+    //                     // console.log(row[2])
+    //                     episodeDiv.image.src = row[1]
+    //                 }
+    //                 // console.log(row)
+    //                 try{
+    //                     if(episodeDiv[datas[i][j][0]].innerHTML === "undefined"){
+    //                         episodeDiv[row[0]].innerHTML = ""
+
+    //                     } else{
+    //                         episodeDiv[row[0]].innerHTML = row[0] + ': ' + row[1]?row[1]:"what"
+
+
+    //                     }
+
+    //                 }catch(er){
+    //                     console.log()
+
+    //                     // console.log(episodeDiv[datas[i][j][1]] )
+    //                 }
+    //                     episodeDiv['div'].append(episodeDiv[row[0]])
+    //                     // console.log(episodeDiv)
+
+    //             }
+    
+    //         }
+                        // parentElement.appendChild(episodeDiv['div'])
+
+            // }}
+        //     for(row of episode){
+
+        //     }
+        //     console.log(episodeDiv.div)
+        //     console.log('hey')
+
+        // }
+        //request result format is an array e.g [['name','name'],'num',['image','src',true]]
+        
+    // }
+    // }
+        -->
